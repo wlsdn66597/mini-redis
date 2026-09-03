@@ -1,5 +1,90 @@
 # Mini Redis
 
+SET user:1 "Alice"       
+
+SET user:2 "Bob"            
+
+GET user:1          
+
+GET nope            
+
+EXISTS user:1           
+
+EXISTS nope         
+
+DBSIZE                   
+
+KEYS                       
+
+      
+
+DEL user:1              
+
+DEL user:1             
+
+DBSIZE                      
+
+KEYS                   
+
+SET name "Alice Kim"        
+
+GET name 
+
+---------------------
+
+CONFIG SET maxmemory 30    
+
+SET user:1 "Alice"        
+
+SET user:2 "Bob"        
+
+GET user:1                
+
+SET user:3 "Charlie"        
+
+GET user:1                
+
+GET user:2               
+
+KEYS                     
+
+-----------------------
+
+info memory
+
+-----------------------
+
+SET session:1 hello       
+
+EXPIRE session:1 3       
+
+TTL session:1               
+
+
+
+GET session:1             
+
+TTL session:1               
+
+DBSIZE                      
+
+--------------------------------
+
+HELLO                      
+
+GET                      
+
+CONFIG SET maxmemory abc    → (error) ERR value is not an integer or out of range
+
+CONFIG SET maxmemory 5    
+
+SET key "11111111111111111111111111111"    
+
+
+
+
+
+
 파이썬 내장 `dict` / `set` / `collections` 를 **전혀 쓰지 않고**,
 해시맵 · 이중 연결 리스트 · 최소 힙을 밑바닥부터 구현해 만든 CLI 기반 In-Memory Key-Value 저장소입니다.
 
